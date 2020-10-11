@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2076EC1"
+    android:backgroundTint="#747B98E3"
+    android:backgroundTintMode="src_over"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="251dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="141dp"
+        android:text="Result: 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/number1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="162dp"
+        android:ems="10"
+        android:hint="EnterNumber(Numara Gir)"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="EnterNumber(Numara Gir)"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1Text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="149dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Text">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="#512196F3"
+            android:onClick="sum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="#512196F3"
+            android:onClick="deduct"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="#512196F3"
+            android:onClick="multiply"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="#512196F3"
+            android:onClick="divide"
+            android:text="/" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
